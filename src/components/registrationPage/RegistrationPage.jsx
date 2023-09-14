@@ -3,7 +3,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./RegistrationPage.css";
 import { CiBurger } from "react-icons/ci";
-import registerimage from "./registerimage.jpg";
+import registerimage from "../registrationPage/images/registerimage.jpg";
 
 export default function RegistrationPage() {
   const [firstName, setFirstName] = useState("");

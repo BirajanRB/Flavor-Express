@@ -1,6 +1,6 @@
 import React from "react";
 import { useRef } from "react";
-import picture from "./picture.jpg";
+import picture from "../loginPage/images/picture.jpg";
 import "./LoginPage.css";
 import { NavLink } from "react-router-dom";
 
