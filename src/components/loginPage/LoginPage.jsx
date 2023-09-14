@@ -13,18 +13,21 @@ export default function LoginPage() {
     const data = {
       email: emailRef.current.value,
       password: passwordRef.current.value,
-      role: "ROLE_CUSTOMER",
+      role: roleRef.current.value,
     };
 
     axios
-        .post("http://localhost:8081/auth/login", data)
-        .then((response) => {
-          console.log(response.data.jwtToken);
-          localStorage.setItem("FlavorExpressUserToken", JSON.stringify(response.data.jwtToken));
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+      .post("http://localhost:8081/auth/login", data)
+      .then((response) => {
+        console.log(response.data.jwtToken);
+        localStorage.setItem(
+          "FlavorExpressUserToken",
+          JSON.stringify(response.data.jwtToken)
+        );
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
   return (
     <>
@@ -63,12 +66,12 @@ export default function LoginPage() {
             <p>Don't have an account?</p>
             <NavLink to="/registrationPage">Sign Up</NavLink>
           </div>
-          {/* <label>Role: </label>
-                <select defaultValue="ROLE_USER" ref={roleRef}>
-                    <option value="ROLE_USER">User</option>
-                    <option value="ROLE_ADMIN">Admin</option>
-                    <option value="ROLE_AGENT">Agent</option>
-                </select> */}
+          <label>Role: </label>
+          <select defaultValue="ROLE_CUSTOMER" ref={roleRef}>
+            <option value="ROLE_CUSTOMER">Customer</option>
+            <option value="ROLE_ADMIN">Admin</option>
+            <option value="ROLE_AGENT">Agent</option>
+          </select>
         </div>
       </div>
     </>
