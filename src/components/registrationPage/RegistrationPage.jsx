@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./RegistrationPage.css";
 import { CiBurger } from "react-icons/ci";
 import registerimage from "./images/registerimage.jpg";
@@ -18,6 +18,8 @@ export default function RegistrationPage() {
   const [errors, setErrors] = useState({});
 
   localStorage.setItem("FlavorExpressUserToken", JSON.stringify(""));
+
+  let navTo = useNavigate();
 
   const validateForm = () => {
     const newErrors = {};
