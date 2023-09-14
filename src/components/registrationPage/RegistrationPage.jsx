@@ -40,19 +40,9 @@ export default function RegistrationPage() {
 
     if (password.length < 6)
       newErrors.password = "Password must be at least 6 characters";
+
     if (password !== confirmPassword)
       newErrors.confirmPassword = "Passwords do not match";
-
-    // if (!dob) {
-    //   newErrors.dob = "DOB should be selected";
-    // } else {
-    //   const current = new Date();
-    //   const entered = new Date(dob);
-    //   const required = current.getFullYear() - entered.getFullYear();
-    //   if (required < 18) {
-    //     newErrors.dob = "Must be 18";
-    //   }
-    // }
 
     if (!address) {
       newErrors.address = "Address Should be given";
