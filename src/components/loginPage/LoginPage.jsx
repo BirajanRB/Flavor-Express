@@ -3,29 +3,28 @@ import { useRef } from "react";
 import picture from "../loginPage/images/picture.jpg";
 import "./LoginPage.css";
 import { NavLink } from "react-router-dom";
-
+import axios from "axios";
 export default function LoginPage() {
   let emailRef = useRef("");
   let passwordRef = useRef("");
-  // let roleRef = useRef("");
+  let roleRef = useRef("");
 
   function loginHandle() {
     const data = {
       email: emailRef.current.value,
       password: passwordRef.current.value,
-      role: roleRef.current.value,
+      role: "ROLE_CUSTOMER",
     };
 
-    // POST
-
     axios
-      .post("http://localhost:8080/home/login", data)
-      .then((response) => {
-        console.log(response);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+        .post("http://localhost:8081/auth/login", data)
+        .then((response) => {
+          console.log(response.data.jwtToken);
+          localStorage.setItem("FlavorExpressUserToken", JSON.stringify(response.data.jwtToken));
+        })
+        .catch((error) => {
+          console.error(error);
+        });
   }
   return (
     <>

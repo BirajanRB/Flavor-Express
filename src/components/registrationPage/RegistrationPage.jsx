@@ -15,6 +15,7 @@ export default function RegistrationPage() {
   const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [errors, setErrors] = useState({});
+  localStorage.setItem("FlavorExpressUserToken", JSON.stringify(""));
 
   const validateForm = () => {
     const newErrors = {};
