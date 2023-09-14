@@ -1,8 +1,11 @@
 import React from "react";
 import "./HeroSection.css";
 import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 export default function HeroSection() {
+  let navTo = useNavigate();
+
   return (
     <div className="hero_section">
       <div className="overlay">
@@ -11,8 +14,15 @@ export default function HeroSection() {
             <img src="Logo2.png" alt="Logo" />
           </div>
           <div className="buttons">
-            <button className="button1">Sign Up</button>
-            <button className="button2">Login</button>
+            <button
+              className="button1"
+              onClick={() => navTo("/registrationPage")}
+            >
+              Sign Up
+            </button>
+            <button className="button2" onClick={() => navTo("/loginPage")}>
+              Login
+            </button>
           </div>
         </div>
       </div>
