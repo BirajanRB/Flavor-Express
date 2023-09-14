@@ -8,7 +8,7 @@
 .RegistrationBody {
   display: flex;
   justify-content: center;
-  align-items: space-between;
+  /*align-items: space-between;*/
   padding: 30px;
   background-color: #ffffff;
   border: 1px solid #ccc;
@@ -16,6 +16,7 @@
   max-width: 800px;
   margin: 150px auto 0;
   flex-direction: row;
+  font-family: 'Gentium Plus', serif;
 }
 
 .register-form {

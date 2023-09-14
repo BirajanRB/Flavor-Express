@@ -70,7 +70,7 @@ export default function RegistrationPage() {
       };
 
       axios
-        .post("http://localhost:8080/home/register", registerData)
+        .post("http://localhost:8081/auth/register", registerData)
         .then((response) => {
           console.log(response.data);
           navTo("/Login");
