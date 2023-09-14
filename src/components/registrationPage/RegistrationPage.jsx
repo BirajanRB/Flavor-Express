@@ -3,7 +3,8 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./RegistrationPage.css";
 import { CiBurger } from "react-icons/ci";
-import registerimage from "../registrationPage/images/registerimage.jpg";
+import registerimage from "./images/registerimage.jpg";
+import axios from "axios";
 
 export default function RegistrationPage() {
   const [firstName, setFirstName] = useState("");
@@ -14,6 +15,8 @@ export default function RegistrationPage() {
   const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [errors, setErrors] = useState({});
+
+  localStorage.setItem("FlavorExpressUserToken", JSON.stringify(""));
 
   const validateForm = () => {
     const newErrors = {};
@@ -39,19 +42,9 @@ export default function RegistrationPage() {
 
     if (password.length < 6)
       newErrors.password = "Password must be at least 6 characters";
+
     if (password !== confirmPassword)
       newErrors.confirmPassword = "Passwords do not match";
-
-    // if (!dob) {
-    //   newErrors.dob = "DOB should be selected";
-    // } else {
-    //   const current = new Date();
-    //   const entered = new Date(dob);
-    //   const required = current.getFullYear() - entered.getFullYear();
-    //   if (required < 18) {
-    //     newErrors.dob = "Must be 18";
-    //   }
-    // }
 
     if (!address) {
       newErrors.address = "Address Should be given";
@@ -79,9 +72,14 @@ export default function RegistrationPage() {
       };
 
       axios
-        .post("http://localhost:8080/home/register", registerData)
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
+        .post("http://localhost:8081/auth/register", registerData)
+        .then((response) => {
+          console.log(response.data);
+          navTo("/loginPage");
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     }
   };
   return (
