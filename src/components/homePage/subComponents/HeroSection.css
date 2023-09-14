@@ -79,12 +79,11 @@
 }
 
 .heading {
-  font-size: 36px;
+  font-family: "Pacifico", cursive;
+  font-size: 60px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
-
-/* Add your search icon styling here, e.g., .search-icon img { ... } */
 
 .search_bar {
   display: flex;
@@ -93,35 +92,58 @@
   margin-top: 20px;
 }
 
-.search-input {
+.search_input {
   position: relative;
-  width: 60%;
+  width: 100%;
 }
 
 input[type="text"] {
   width: 100%;
-  padding: 10px 30px;
+  padding: 12px 40px;
   background-color: rgba(255, 255, 255, 0.75);
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 19px;
   color: #000;
 }
 
-.search-icon {
+.search_icon {
   position: absolute;
-  right: 10px;
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
+  opacity: 60%;
+  color: black;
 }
 
-.search-button {
-  background-color: red;
+.search_button {
+  background-color: #ff4444;
   color: white;
   border: none;
   border-radius: 20px;
   padding: 15px 30px;
   cursor: pointer;
-  font-size: 16px;
-  margin-left: 20px;
+  font-size: 19px;
+  margin-left: 10px;
+}
+.button1,
+.button2,
+.search_button {
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 19px;
+  transition: background-color 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.button1:hover,
+.button2:hover {
+  background-color: #ff4444;
+  color: white;
+}
+
+.search_button:hover {
+  background-color: white;
+  color: black;
 }

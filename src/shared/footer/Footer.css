@@ -15,7 +15,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
 }
 
@@ -23,7 +23,9 @@
   flex-basis: 50%;
 }
 .footer_left h3 {
+  font-family: "Jost", sans-serif;
   padding-bottom: 30px;
+  font-size: 25px;
 }
 
 .footer_left img {
@@ -48,7 +50,14 @@
   margin-right: 20px;
   margin-bottom: 20px;
 }
-
+.footer_column h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 25px;
+}
+.footer_column ul {
+  font-size: 19px;
+  font-family: "Jost", sans-serif;
+}
 .footer_column:last-child {
   margin-right: 0;
 }
@@ -72,11 +81,15 @@
 }
 
 .footer_column a:hover {
-  text-decoration: underline;
+  color: #ff4444;
 }
 
 .social_icons a i {
   font-size: 40px;
   color: white;
   margin-right: 30px;
+  transition: color 0.3s;
+}
+.social_icons a i:hover {
+  color: #ff4444;
 }

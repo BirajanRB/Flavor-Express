@@ -11,7 +11,7 @@ import CartPage from "./components/cartPage/CartPage";
 function App() {
   return (
     <div className="appContainer">
-      {/*       <Routes>
+      <Routes>
         <Route path="/" element={<HomePage />}></Route>
         <Route path="/loginPage" element={<LoginPage />}></Route>
         <Route path="/registrationPage" element={<RegistrationPage />}></Route>
@@ -20,8 +20,7 @@ function App() {
         <Route path="/foodItemsPage" element={<FoodItemsPage />}></Route>
         <Route path="/cartPage" element={<CartPage />}></Route>
         <Route path="*" element={<h1>PageNotFound! :(</h1>} />
-      </Routes> */}
-      <HomePage />
+      </Routes>
     </div>
   );
 }

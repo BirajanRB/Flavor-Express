@@ -10,6 +10,7 @@
 }
 
 .preferred_content h1 {
+  font-family: "Gentium Plus", serif;
   padding-top: 20px;
   font-size: 45px;
   margin-bottom: 20px;
@@ -42,6 +43,7 @@
 }
 
 .restaurant p {
+  font-family: "Gentium Plus", serif;
   margin-top: 10px;
   font-weight: bold;
   font-size: 28px;
@@ -52,10 +54,17 @@
   color: white;
   padding: 10px 20px;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   font-size: 25px;
   cursor: pointer;
   margin-top: 25px;
   margin-bottom: 40px;
   text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+  border: 2px solid transparent;
+}
+.view_more_button:hover {
+  background-color: white;
+  color: black;
+  border-color: black;
 }

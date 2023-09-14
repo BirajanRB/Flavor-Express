@@ -1,5 +1,6 @@
 import React from "react";
 import "./HeroSection.css";
+import { FaSearch } from "react-icons/fa";
 
 export default function HeroSection() {
   return (
@@ -18,11 +19,13 @@ export default function HeroSection() {
       <div className="content">
         <h1 className="heading">Your Cravings, Our Delivery</h1>
         <div className="search_bar">
-          <div className="search-input">
+          <div className="search_input">
+            <span className="search_icon">
+              <FaSearch />
+            </span>
             <input type="text" placeholder="Search for Restaurants or Items" />
-            <span className="search_icon"></span>
           </div>
-          <button className="search-button">Search</button>
+          <button className="search_button">Search</button>
         </div>
       </div>
     </div>
