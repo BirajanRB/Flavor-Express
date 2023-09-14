@@ -15,6 +15,7 @@ export default function RegistrationPage() {
   const [address, setAddress] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [errors, setErrors] = useState({});
+
   localStorage.setItem("FlavorExpressUserToken", JSON.stringify(""));
 
   const validateForm = () => {
@@ -74,7 +75,7 @@ export default function RegistrationPage() {
         .post("http://localhost:8081/auth/register", registerData)
         .then((response) => {
           console.log(response.data);
-          navTo("/Login");
+          navTo("/loginPage");
         })
         .catch((error) => {
           console.error(error);
