@@ -16,7 +16,7 @@
   max-width: 800px;
   margin: 150px auto 0;
   flex-direction: row;
-  font-family: 'Gentium Plus', serif;
+  font-family: "Gentium Plus", serif;
 }
 
 .register-form {
@@ -162,4 +162,9 @@ img {
   .registration-info {
     margin-top: 20px;
   }
+}
+
+.EmptyBox {
+  width: 100%;
+  height: 100px;
 }
