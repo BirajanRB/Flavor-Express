@@ -1,4 +1,5 @@
 import React from "react";
+
 import HeroSection from "./subComponents/HeroSection";
 import HowWorksSection from "./subComponents/HowWorksSection";
 import TopCategories from "./subComponents/TopCategories";
