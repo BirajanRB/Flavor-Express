@@ -3,7 +3,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./RegistrationPage.css";
 import { CiBurger } from "react-icons/ci";
-import registerimage from "../registrationPage/images/registerimage.jpg";
+import registerimage from "./images/registerimage.jpg";
 import axios from "axios";
 
 export default function RegistrationPage() {
