@@ -80,8 +80,13 @@ export default function RegistrationPage() {
 
       axios
         .post("http://localhost:8080/home/register", registerData)
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err));
+        .then((response) => {
+          console.log(response.data);
+          navTo("/Login");
+        })
+        .catch((error) => {
+          console.error(error);
+        });
     }
   };
   return (
