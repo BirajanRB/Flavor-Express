@@ -2,10 +2,10 @@ import React from "react";
 import { useRef } from "react";
 import picture from "../loginPage/images/picture.jpg";
 import Footer from "../../shared/footer/Footer";
-import "./LoginPage.css";
+import "./AdminLoginPage.css";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-export default function LoginPage() {
+export default function AdminLoginPage() {
   let emailRef = useRef("");
   let passwordRef = useRef("");
 
@@ -13,7 +13,7 @@ export default function LoginPage() {
     const data = {
       email: emailRef.current.value,
       password: passwordRef.current.value,
-      role: "ROLE_CUSTOMER",
+      role: "ROLE_ADMIN",
     };
 
     axios
